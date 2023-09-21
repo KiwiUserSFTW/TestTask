@@ -12,7 +12,7 @@ const Comments: React.FC = () => {
     const { actualItem, data } = useTypedSelector(state => state.list);
     const [value, setValue] = useState('');
     const [selectedColor, setSelectColor] = useState('#000000')
-    const handleClick = (e: any) => {
+    const handleClick = () => {
         if (value != '') {
             addComment({ id: actualItem, value: value, color: selectedColor })
             setValue('')

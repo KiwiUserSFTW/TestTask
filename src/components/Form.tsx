@@ -1,13 +1,10 @@
-import { useTypedSelector } from "../hooks/useTypedSelector";
 import { useAction } from "../hooks/useAction";
 import { useState } from "react";
 import { Button, Input, CreateForm } from "../styles/form";
 
 const Form: React.FC = () => {
     const [value, setValue] = useState('');
-
     const { addItem } = useAction();
-    const { data } = useTypedSelector(state => state.list);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 
